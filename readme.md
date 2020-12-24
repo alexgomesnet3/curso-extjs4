@@ -1,5 +1,4 @@
-
-## Curso de Fundamentos Ext JS 4 - Loiane Training:
+## Curso de Fundamentos ExtJS 4 - Plataforma Loiane Training:
 
 <p align="center">
   <img src="/assets/img/curso-extjs4.png" alt="Curso de Fundamentos em ExtJS4 Loiane Groner" width="1280">
