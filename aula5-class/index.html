@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Aula 05 - Criando Classes no ExtJS4</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../ExtJS4/resources/css/ext-all.css">
+        <script type="text/javascript" src="../extjs/ext-all-dev.js"></script>
+    </head>
+    <body>
+
+    </body>
+    <script type="text/javascript">
+        Ext.onReady(function(){
+            Ext.define('User', {
+                name: '',
+                password: '',
+                constructor: function(options) {
+                    Ext.apply(this, options || {});
+                    console.log('O construtor foi chamado!')
+                },
+                login: function() {
+                    console.log('Fazendo login ...');
+                },
+                logout: function() {
+                    console.log('Efetuando logout ...');
+                }
+            },
+                function() {
+                    console.log('Função de Callback foi chamada!');
+                }
+            );
+
+            var usuario = Ext.create('User', {
+                name: 'Alex',
+                password: '123456'
+            });
+            console.log(usuario);
+        });
+    </script>
+</html>
