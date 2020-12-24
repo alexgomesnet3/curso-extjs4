@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 ## Curso de Fundamentos ExtJS 4 - Plataforma Loiane Training:
+=======
+
+## Curso de Fundamentos ExtJS 4 - Loiane Training:
+>>>>>>> 6a48b78c3cedf2cd106ffeda6447c003f3eb4f93
 
 <p align="center">
   <img src="/assets/img/curso-extjs4.png" alt="Curso de Fundamentos em ExtJS4 Loiane Groner" width="1280">
@@ -11,7 +16,7 @@ https://loiane.training/cursos
 
 https://docs.sencha.com/extjs/4.0.0/
 
-### Abaixo uma visão parcial de uma Estrutura de uma das páginas em ExtJs4 presentes no curso:
+### Abaixo uma visão parcial da estrutura de uma das páginas utilizando o ExtJS 4, presente no curso:
 
 <p align="center">
   <img src="/assets/img/visual_code_page.png" alt="Tela da Aula de Classes com ExtJS" width="1280">
