@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Aula 08 - Alias e xType no ExtJS4</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../extjs/resources/css/ext-all.css">
+        <script type="text/javascript" src="../extjs/ext-all-dev.js"></script>
+    </head>
+    <body>
+        <div id="1"></div>
+        <div id="2"></div>
+        <div id="3"></div>
+    </body>
+    <script type="text/javascript">
+
+        Ext.define('Aula08.component.MyButton', {
+            extend: 'Ext.button.Button',
+            alias: 'widget.meubotao',
+
+            initComponent: function() {
+                this.text = 'Meu Botão';
+                this.callParent();
+            }
+        });
+
+        Ext.onReady(function(){
+            Ext.widget('meubotao', {
+                renderTo: Ext.getBody()
+            });
+
+            Ext.create('Ext.window.Window', {
+                title: 'Hello Window',
+                height: 200,
+                width: 400,
+                items: {  
+                    xtype: 'button',
+                    text: 'Meu Novo Botão'
+                }
+            }).show();
+        });
+
+    </script>
+</html>
