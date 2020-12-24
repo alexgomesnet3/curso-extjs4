@@ -12,7 +12,7 @@ https://loiane.training/cursos
 
 https://docs.sencha.com/extjs/4.0.0/
 
-### Abaixo uma visão parcial da estrutura de uma das páginas utilizando o ExtJS 4 presentes no curso:
+### Abaixo uma visão parcial da estrutura de uma das páginas utilizando o ExtJS 4, presente no curso:
 
 <p align="center">
   <img src="/assets/img/visual_code_page.png" alt="Tela da Aula de Classes com ExtJS" width="1280">
