@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Aula 09 - Configs, Statics e Singletons no ExtJS4</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../extjs/resources/css/ext-all.css">
+        <script type="text/javascript" src="../extjs/ext-all-dev.js"></script>
+    </head>
+    <body></body>
+    <script type="text/javascript">
+
+        Ext.define('Users', {
+            // Usando as Configurações na definição dos objetos de uma Classe
+            config: {
+                name: '',
+                password: ''
+            },
+            /* setName: function(n) {
+                this.name = n + 'Developer';
+            } */
+        });
+
+        Ext.define('Calculadora', {
+            // Declaração de atributos Statics dentro de uma Classe
+            statics: {
+                numero: 0,
+                soma: function(num1, num2) {
+                    return num1 + num2;
+                }
+            },
+            constructor: function() {
+                this.statics().numero++;
+            }
+        });
+
+        Ext.define('ClasseDeConstantes', {
+
+            singleton: true,
+
+            URL_LINKEDIN: 'https://www.linkedin.com/in/alex-gomes-net3',
+            URL_BLOG_LOIANE: 'https://loiane.training/'
+        });
+
+        Ext.onReady(function(){
+            
+            // Abaixo o código para criar um instância de Users
+            /* let user = Ext.create('Users');
+            user.setName('Alex');
+            user.setPassword('123456');
+
+            console.log('Nome:', user.getName());
+            console.log('Password:', user.getPassword()); */
+
+            // Abaixo o código para criar uma instância de Calculadora e fazer os testes com Statics
+            /* console.log('Valor anterior:', Calculadora.numero);
+            let calc = Ext.create('Calculadora');
+            console.log('Valor posterior:', Calculadora.numero);
+            console.log('Valor usando soma:', Calculadora.soma(1, 2)); */
+
+            // Abaixo o código para chamar uma Classe Singleton
+            // let constante = Ext.create('ClasseDeConstantes'); // Classes Singleton não podem ser instânciadas
+            console.log(ClasseDeConstantes.URL_BLOG_LOIANE);
+        });
+
+    </script>
+</html>
